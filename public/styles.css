@@ -1,0 +1,79 @@
+.dropable-area {
+  height: 600px;
+  width: 300px;
+  border: 1px solid black;
+  padding: 20px;
+  position: relative;
+}
+.dropable-area__header {
+  height: 20%;
+  margin: 0;
+}
+.dropable-area__button-new {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+.dropable-area__cards {
+  overflow-x: scroll;
+  margin: 0 auto;
+  width: 90%;
+  height: 80%;
+  border: 1px solid gray;
+  transition: all 300ms;
+}
+.dropable-area__drag-over {
+  background-color: yellow;
+}
+.dragable-card {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 300ms normal;
+}
+.dragable-card__drag-start {
+  visibility: hidden;
+  background-color: blue;
+  transform: scale(0.8);
+}
+.dragable-card__drag-over {
+  background-color: green;
+}
+.card-modal {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.card-modal__form {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card-modal__details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card-modal__close {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.dropable-area-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*# sourceMappingURL=styles.css.map */

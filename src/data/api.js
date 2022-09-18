@@ -7,7 +7,6 @@ export const addCard = (id, title, content, author) => {
     footer: `Le ${Date.now()} de ${author}`,
   };
 
-  console.log(card);
   tables[id].cards.push(card);
 };
 

@@ -18,7 +18,6 @@ export const cardsReducer = (state = cardsInitialState, action) => {
       ];
 
     case MOVE_CARD:
-      console.log("ST", state);
       const beforeCard = state.find(
         (card) => card.id === action.payload.beforeCardId
       );
@@ -38,10 +37,7 @@ export const cardsReducer = (state = cardsInitialState, action) => {
 
       if (beforeCard) {
         let indexOfBeforeCard = updatedState.indexOf(beforeCard);
-        console.log("I B", indexOfBeforeCard);
         updatedState.splice(indexOfBeforeCard, 0, currentCard);
-
-        console.log("HJERRRRE", beforeCard, currentCard);
       } else if (afterCard) {
         let indexOfAfterCard = updatedState.indexOf(afterCard);
         updatedState.splice(indexOfAfterCard + 1, 0, currentCard);
@@ -50,7 +46,6 @@ export const cardsReducer = (state = cardsInitialState, action) => {
       }
 
       // updatedState.splice(2, 0, currentCard);
-      console.log("UPDT", updatedState);
       return [
         ...updatedState.map((card) => {
           return card;

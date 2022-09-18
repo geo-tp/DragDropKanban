@@ -45,7 +45,7 @@ body {
   background-color: #d9d9d9d6;
   border-radius: 5px;
   padding: 5px 10px;
-  height: 90px;
+  height: 70px;
 }
 .dragable-card__drag-start {
   visibility: hidden;
@@ -59,6 +59,10 @@ body {
   margin: 0px;
   padding: 0px;
   font-size: 0.95em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 .dragable-card__body {
   white-space: nowrap;
@@ -66,6 +70,7 @@ body {
   overflow: hidden;
   word-wrap: break-word;
   font-size: 0.9em;
+  margin: 5px 0px;
 }
 .dragable-card__footer {
   white-space: nowrap;
@@ -73,6 +78,7 @@ body {
   overflow: hidden;
   word-wrap: break-word;
   font-size: 0.75em;
+  margin: 5px 0px;
 }
 .card-modal {
   width: 100vw;
@@ -147,10 +153,10 @@ body {
 }
 
 .description-card {
-  height: 150px;
+  height: 120px;
   background-color: #d9d9d9d6;
   margin-top: 10px;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 5px;
 }
 .description-card__banner {
   height: 40px;
@@ -176,6 +182,12 @@ body {
 }
 .new-table-button i {
   margin-right: 15px;
+}
+
+.new-table-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d980;
 }
 
 .dropable-area-container {

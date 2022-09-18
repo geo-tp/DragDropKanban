@@ -23,10 +23,9 @@ export const DropableArea = ({
   const drop = (event) => {
     event.preventDefault();
     let elem = event.target;
-
+    console.log("ELEM", elem);
     var cardId = event.dataTransfer.getData("text");
-    console.log("VALIDATE", validateCardId(cardId));
-    console.log(cardId);
+
     if (!validateCardId(cardId)) {
       return;
     }
@@ -35,13 +34,13 @@ export const DropableArea = ({
     let draggedOverCard = null;
     let beforeCardId = null;
     let afterCardId = null;
-    console.log("TABLE", elem.id);
     // If element is not dropable, it's a card or child of it
     if (!elem.getAttribute("dropable")) {
+      console.log("HERE", elem);
+
       // if element is not draggable, it's child of card
       while (elem && !elem.getAttribute("draggable")) {
         elem = elem.parentNode;
-        console.log("HERE", elem);
       }
       draggedOverCard = elem;
       [beforeCardId, afterCardId] = _calculateBeforeAfterCard(
@@ -79,7 +78,6 @@ export const DropableArea = ({
     let beforeCardId = null;
     let afterCardId = null;
 
-    console.log("C CARD", card);
     // calculate cursor position
     let cursorY = event.pageY - top - window.pageYOffset;
 
@@ -88,7 +86,6 @@ export const DropableArea = ({
     } else {
       afterCardId = card.id;
     }
-    console.log("BF : ", beforeCardId, afterCardId);
     return [beforeCardId, afterCardId];
   };
 

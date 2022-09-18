@@ -1,0 +1,26 @@
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & button {
+    margin-right: 15px;
+  }
+
+  & button:last-child {
+    margin-right: 0px;
+  }
+
+  & select {
+    margin-right: 15px;
+  }
+
+  & h1 {
+    margin-right: 15px;
+  }
+}

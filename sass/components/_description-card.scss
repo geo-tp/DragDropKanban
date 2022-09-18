@@ -1,0 +1,14 @@
+.description-card {
+  height: 150px;
+  background-color: $color0;
+  margin-top: 10px;
+  border-radius: 5px 5px 0px 0px;
+  &__banner {
+    height: 40px;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  &__content {
+    padding: 0px 10px;
+  }
+}

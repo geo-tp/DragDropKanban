@@ -4,6 +4,7 @@ import { DropableAreaContainer } from "../containers/DropableAreaContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { getKanban } from "../store/selectors/kanban";
 import { DetailCardModal } from "../components/DetailCardModal";
+import { MenuContainer } from "../containers/MenuContainer";
 
 export const KanbanPage = () => {
   const [createCardModalIsOpen, setCreateCardModalIsOpen] = useState(false);
@@ -38,39 +39,9 @@ export const KanbanPage = () => {
     setDetailCardModalIsOpen(false);
   };
 
-  // const moveCard = (cardId, tableId) => {
-  //   let founded = false;
-  //   let card = {};
-  //   for (let i = 0; i < tables.length; i++) {
-  //     if (founded) {
-  //       break;
-  //     }
-
-  //     for (let j = 0; j < tables[i].cards.length; i++) {
-  //       if (tables[i].cards[j].id === cardId) {
-  //         card = tables[i].cards[j];
-  //         tables[i].cards.splice(j, 1);
-  //         founded = true;
-  //         break;
-  //       }
-  //     }
-  //   }
-  // };
-
-  // const addCard = (id, title, content, author) => {
-  //   let card = {
-  //     header: title,
-  //     body: content,
-  //     footer: `Le ${Date.now()} de ${author}`,
-  //   };
-
-  //   console.log(card);
-  //   tables[id].cards.push(card);
-  //   setTableId({ ...tables });
-  // };
-
   return (
     <div className="kanban-page">
+      <MenuContainer />
       <DropableAreaContainer
         openCreateModal={openCreateModal}
         openDetailModal={openDetailModal}

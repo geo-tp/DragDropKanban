@@ -1,0 +1,13 @@
+.new-table-button {
+  background-color: $color2;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  border: unset;
+  font-size: 0.9em;
+  width: 300px;
+  min-width: 300px;
+  & i {
+    margin-right: 15px;
+  }
+}

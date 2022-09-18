@@ -1,5 +1,5 @@
 // UTILS
-
+@import "./utils/variables";
 // BASE
 @import "./base/global";
 
@@ -7,6 +7,13 @@
 @import "./components/dropable-area";
 @import "./components/dragable-card";
 @import "./components/card-modal";
+@import "./components/kanban-title";
+@import "./components/custom-selector";
+@import "./components/custom-button";
+@import "./components/description-card";
+@import "./components/table-title";
+@import "./components/new-table-button";
 
 // CONTAINERS
 @import "./containers/dropable-area-container";
+@import "./containers/menu-container";

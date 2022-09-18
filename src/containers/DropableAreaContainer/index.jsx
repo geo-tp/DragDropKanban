@@ -1,6 +1,7 @@
 import { DropableArea } from "../../components/DropableArea";
 import { useDispatch, useSelector } from "react-redux";
 import { getTables } from "../../store/selectors/tables";
+import { NewTableButton } from "../../components/NewTableButton";
 
 export const DropableAreaContainer = ({ openCreateModal, openDetailModal }) => {
   const dispatch = useDispatch();
@@ -16,8 +17,11 @@ export const DropableAreaContainer = ({ openCreateModal, openDetailModal }) => {
           id={table.id}
           title={table.title}
           cards={table.cards}
+          descriptionCardColor={table.descriptionCardColor}
+          descriptionCardContent={table.descriptionCardContent}
         />
       ))}
+      <NewTableButton onClick={null} />
     </div>
   );
 };

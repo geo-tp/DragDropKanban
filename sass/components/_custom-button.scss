@@ -1,0 +1,19 @@
+.custom-button {
+  height: 35px;
+  color: $color3;
+  border: unset;
+  margin: 0px;
+  padding: 0px;
+  background-color: $color2;
+  padding: 0px 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+
+  & i {
+    margin: 0px 10px;
+  }
+
+  &--icon-only {
+    padding-right: 10px;
+  }
+}

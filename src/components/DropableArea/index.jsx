@@ -5,12 +5,15 @@ import { moveCard } from "../../store/actions/cards";
 import { useDispatch, useSelector } from "react-redux";
 import { getCards } from "../../store/selectors/cards";
 import { validateCardId } from "../../utils/stringUtils";
+import { DescriptionCard } from "../DescriptionCard";
 
 export const DropableArea = ({
   id,
   title,
   openCreateModal,
   openDetailModal,
+  descriptionCardColor,
+  descriptionCardContent,
 }) => {
   const dispatch = useDispatch();
   const cards = useSelector(getCards);
@@ -97,13 +100,15 @@ export const DropableArea = ({
           : "dropable-area"
       }
     >
-      <h2 className="dropable-area__header">{title}</h2>
-      <button
-        onClick={() => openCreateModal(id)}
-        className="dropable-area__button-new"
-      >
-        New
-      </button>
+      <div className="dropable-area__header">
+        <h2 className="table-title">{title}</h2>
+        <button
+          onClick={() => openCreateModal(id)}
+          className="custom-button custom-button--icon-only"
+        >
+          <i className="fas fa-plus"></i>
+        </button>
+      </div>
       <div
         id={id}
         className="dropable-area__cards"
@@ -113,6 +118,10 @@ export const DropableArea = ({
         onDragOver={allowDrop}
         dropable="true"
       >
+        <DescriptionCard
+          color={descriptionCardColor}
+          description={descriptionCardContent}
+        />
         {cards.map(
           (card) =>
             card.tableId === id && (

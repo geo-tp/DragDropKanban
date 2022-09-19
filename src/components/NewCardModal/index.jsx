@@ -26,13 +26,13 @@ export const NewCardModal = ({ tableId, closeCreateModal }) => {
       <form className="card-modal__form" onSubmit={handleSubmit}>
         <button
           onClick={() => closeCreateModal(true)}
-          className="card-modal__close"
+          className="custom-button custom-button--icon-only card-modal__form__close"
         >
           X
         </button>
-        <p>Créer une nouvelle carte</p>
         <label htmlFor="card-title">Titre</label>
         <input
+          className="custom-input"
           required
           onChange={(event) => setHeader(event.target.value)}
           type="text"
@@ -41,6 +41,7 @@ export const NewCardModal = ({ tableId, closeCreateModal }) => {
         />
         <label htmlFor="card-content">Contenu</label>
         <textarea
+          className="custom-textarea"
           required
           onChange={(event) => setBody(event.target.value)}
           name="card-content"
@@ -48,7 +49,13 @@ export const NewCardModal = ({ tableId, closeCreateModal }) => {
           cols="30"
           rows="10"
         ></textarea>
-        <button type="submit">Créer</button>
+        <button
+          className="custom-button card-modal__form__button"
+          type="submit"
+        >
+          <i className="fas fa-ticket"></i>
+          Créer
+        </button>
       </form>
     </div>
   );

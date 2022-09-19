@@ -17,15 +17,15 @@ export const DetailCardModal = ({ tableTitle, card, closeDetailModal }) => {
     <div className="card-modal">
       <div className="card-modal__details">
         <button
+          className="custom-button custom-button--icon-only card-modal__details__close"
           onClick={() => closeDetailModal(true)}
-          className="card-modal__close"
         >
-          X
+          <i className="fas fa-close"></i>
         </button>
-        <h2>{tableTitle}</h2>
-        <p>{card.title}</p>
+        <p className="card-modal__details__table-title">{tableTitle}</p>
+        <h2>{card.header}</h2>
         <p>{card.body}</p>
-        <p>{card.footer}</p>
+        <p className="card-modal__details__footer">{card.footer}</p>
       </div>
     </div>
   );

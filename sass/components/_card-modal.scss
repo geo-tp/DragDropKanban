@@ -11,27 +11,56 @@
   align-items: center;
 
   &__form {
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     position: relative;
-    // width: 80%;
-    // height: 80%;
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, -50%);
+    background-color: $color2;
+    border-radius: 10px;
+    padding: 20px;
+
+    & input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    & textarea {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &__close {
+      position: absolute;
+      right: 10px;
+      top: 2%;
+    }
   }
 
   &__details {
+    background-color: $color1;
+    border-radius: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     position: relative;
-  }
 
-  &__close {
-    position: absolute;
-    right: 5%;
-    top: 5%;
+    &__table-title {
+      position: absolute;
+      top: 0%;
+    }
+
+    & h2 {
+      padding-top: 20px;
+      margin-bottom: 0px;
+    }
+
+    &__footer {
+      font-size: 0.8em;
+    }
+
+    &__close {
+      position: absolute;
+      right: 5%;
+      top: 5%;
+    }
   }
 }

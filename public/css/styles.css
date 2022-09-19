@@ -31,7 +31,7 @@ body {
   overflow-x: scroll;
   margin: 0 auto;
   width: 100%;
-  height: 80%;
+  height: 94%;
   transition: all 300ms;
 }
 .dropable-area__drag-over {
@@ -99,17 +99,46 @@ body {
   align-items: center;
 }
 .card-modal__form {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: #d9d9d980;
+  border-radius: 10px;
+  padding: 20px;
+}
+.card-modal__form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-modal__form textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-modal__form__close {
+  position: absolute;
+  right: 10px;
+  top: 2%;
 }
 .card-modal__details {
+  background-color: #d9d9d9b8;
+  border-radius: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.card-modal__close {
+.card-modal__details__table-title {
+  position: absolute;
+  top: 0%;
+}
+.card-modal__details h2 {
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+.card-modal__details__footer {
+  font-size: 0.8em;
+}
+.card-modal__details__close {
   position: absolute;
   right: 5%;
   top: 5%;
@@ -207,6 +236,7 @@ body {
 .new-table-form select {
   width: 50%;
   margin: 10px auto;
+  background-color: #d9d9d9b8;
 }
 .new-table-form button {
   position: absolute;
@@ -217,6 +247,15 @@ body {
 
 .custom-input {
   height: 35px;
+  border: unset;
+  border-radius: 5px;
+  background-color: #d9d9d9b8;
+  padding-left: 5px;
+}
+
+.custom-textarea {
+  height: 200px;
+  width: 300px;
   border: unset;
   border-radius: 5px;
   background-color: #d9d9d9b8;

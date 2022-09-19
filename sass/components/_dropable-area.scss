@@ -3,11 +3,12 @@
   width: 300px;
   min-width: 300px;
   margin-right: 10px;
-
+  overflow-x: hidden;
   padding: 10px;
   position: relative;
   background-color: $color1;
   border-radius: 10px;
+
   &__header {
     margin: 0;
     display: flex;
@@ -21,11 +22,25 @@
   }
 
   &__cards {
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0 auto;
     width: 100%;
     height: 94%;
     transition: all 300ms;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color4;
+      margin-left: 20px;
+    }
   }
 
   &__drag-over {

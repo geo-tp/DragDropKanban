@@ -15,21 +15,9 @@
     transition: all 300ms;
   }
 
-  // &__drag-start {
-  //   visibility: hidden;
-  //   background-color: blue;
-  //   transform: scale(0.8);
-  // }
-
   &__drag-over {
     & div {
-      margin-top: 40px;
-    }
-
-    &--bottom {
-      height: 200px;
-      justify-content: flex-start;
-      background-color: aqua;
+      margin-top: 90px;
     }
   }
 

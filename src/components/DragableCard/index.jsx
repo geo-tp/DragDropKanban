@@ -9,6 +9,7 @@ export const DragableCard = ({
 }) => {
   const [isCurrentlyDragged, setIsCurrentlyDragged] = useState(false);
   const [isDraggedOver, setIsDraggedOver] = useState(false);
+  const [isDraggedEnd, setIsDraggedEnd] = useState(false);
 
   const dragStart = (event) => {
     setIsCurrentlyDragged(true);
@@ -22,6 +23,12 @@ export const DragableCard = ({
   const dragEnter = (event) => {
     if (!isDraggedOver && !isCurrentlyDragged) {
       setIsDraggedOver(true);
+    }
+  };
+
+  const dragLeave = (event) => {
+    if (isDraggedOver) {
+      setIsDraggedOver(false);
     }
   };
 

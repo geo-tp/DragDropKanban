@@ -5,7 +5,7 @@ export const tablesInitialState = [
     title: "Conception",
     color: "#3fa3b3",
     description:
-      "Ce qu'il faut cenceptualiser à l'aide d'UML et divers documents",
+      "Ce qu'il faut conceptualiser à l'aide d'UML, maquette, et divers documents",
   },
   {
     id: "T1",

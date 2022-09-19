@@ -1,7 +1,10 @@
 // UTILS
 @import "./utils/variables";
+@import "./utils/keyframes";
+
 // BASE
 @import "./base/global";
+@import "./base/typography";
 
 // COMPONENTS
 @import "./components/dropable-area";

@@ -6,9 +6,9 @@ export const randomizeCardId = () => {
 
   for (let i = 0; i < 7; i++) {
     if (i < 4) {
-      str += char[Math.floor(Math.random() * (1 + char.length))];
+      str += char[Math.floor(Math.random() * char.length)];
     } else {
-      str += num[Math.floor(Math.random() * (1 + num.length))];
+      str += num[Math.floor(Math.random() * num.length)];
     }
   }
 

@@ -62,11 +62,11 @@ export const DropableArea = ({
   };
 
   const dragEnter = (event) => {
-    setIsDraggedOver(true);
+    // setIsDraggedOver(true);
   };
 
   const dragLeave = (event) => {
-    setIsDraggedOver(false);
+    // setIsDraggedOver(false);
   };
 
   const allowDrop = (event) => {

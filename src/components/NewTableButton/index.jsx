@@ -1,6 +1,9 @@
-export const NewTableButton = (onClick) => {
+export const NewTableButton = ({ openModal, setOpenModal }) => {
   return (
-    <button className="new-table-button">
+    <button
+      onClick={() => setOpenModal(!openModal)}
+      className="new-table-button"
+    >
       <i className="fa fa-plus"></i>
       New Table
     </button>

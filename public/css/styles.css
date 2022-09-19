@@ -38,6 +38,11 @@ body {
   background-color: yellow;
 }
 .dragable-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 300ms;
+}
+.dragable-card div {
   margin-top: 10px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -46,14 +51,15 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
   height: 70px;
+  transition: all 300ms;
 }
-.dragable-card__drag-start {
-  visibility: hidden;
-  background-color: blue;
-  transform: scale(0.8);
+.dragable-card__drag-over div {
+  margin-top: 40px;
 }
-.dragable-card__drag-over {
-  background-color: green;
+.dragable-card__drag-over--bottom {
+  height: 200px;
+  justify-content: flex-start;
+  background-color: aqua;
 }
 .dragable-card__header {
   margin: 0px;
@@ -188,6 +194,31 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #d9d9d980;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.new-table-form input {
+  margin: 10px 0px;
+}
+.new-table-form select {
+  width: 50%;
+  margin: 10px auto;
+}
+.new-table-form button {
+  position: absolute;
+  bottom: -60px;
+  left: 0%;
+  width: 100%;
+}
+
+.custom-input {
+  height: 35px;
+  border: unset;
+  border-radius: 5px;
+  background-color: #d9d9d9b8;
+  padding-left: 5px;
 }
 
 .dropable-area-container {

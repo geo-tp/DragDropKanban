@@ -6,7 +6,10 @@ export const NewTableContainer = () => {
   const [newTableFormIsOpen, setNewTableFormIsOpen] = useState(false);
   return (
     <div className="new-table-container">
-      <NewTableButton />
+      <NewTableButton
+        openModal={newTableFormIsOpen}
+        setOpenModal={setNewTableFormIsOpen}
+      />
       {newTableFormIsOpen && <NewTableForm />}
     </div>
   );

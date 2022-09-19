@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export const DragableCard = ({
   id,
   header,
@@ -21,11 +20,9 @@ export const DragableCard = ({
   };
 
   const dragEnter = (event) => {
-    setIsDraggedOver(true);
-  };
-
-  const dragLeave = (event) => {
-    setIsDraggedOver(false);
+    if (!isDraggedOver && !isCurrentlyDragged) {
+      setIsDraggedOver(true);
+    }
   };
 
   let cardClass = "dragable-card";
@@ -44,15 +41,15 @@ export const DragableCard = ({
       draggable="true"
       onDragStart={dragStart}
       onDragEnd={dragEnd}
-      onDragEnter={dragEnter}
-      onDragLeave={dragLeave}
       onDrop={() => {
         return false;
       }}
     >
-      <h3 className="dragable-card__header">{header}</h3>
-      <p className="dragable-card__body">{body}</p>
-      <p className="dragable-card__footer">{footer}</p>
+      <div onDragEnter={dragEnter}>
+        <h3 className="dragable-card__header">{header}</h3>
+        <p className="dragable-card__body">{body}</p>
+        <p className="dragable-card__footer">{footer}</p>
+      </div>
     </article>
   );
 };

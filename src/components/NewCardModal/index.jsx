@@ -10,8 +10,14 @@ export const NewCardModal = ({ tableId, closeCreateModal }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(tableId);
-    dispatch(addCard(tableId, header, body, `Le ${Date.now()} de ${author}`));
+    dispatch(
+      addCard(
+        tableId,
+        header,
+        body,
+        `Le ${new Date(Date.now()).toLocaleDateString()} de ${author}`
+      )
+    );
     closeCreateModal(true);
   };
 

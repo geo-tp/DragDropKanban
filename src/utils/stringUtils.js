@@ -15,6 +15,10 @@ export const randomizeCardId = () => {
   return str;
 };
 
+export const randomizeTableId = () => {
+  return "T" + randomizeCardId();
+};
+
 export const validateCardId = (id) => {
   let regexp = /^KJ[A-Z]{4}[0-9]{3}$/;
   return regexp.test(id);

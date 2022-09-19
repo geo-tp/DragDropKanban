@@ -18,8 +18,8 @@ export const DropableAreaContainer = ({ openCreateModal, openDetailModal }) => {
           id={table.id}
           title={table.title}
           cards={table.cards}
-          descriptionCardColor={table.descriptionCardColor}
-          descriptionCardContent={table.descriptionCardContent}
+          color={table.color}
+          description={table.description}
         />
       ))}
       <NewTableContainer />

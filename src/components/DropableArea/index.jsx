@@ -12,8 +12,8 @@ export const DropableArea = ({
   title,
   openCreateModal,
   openDetailModal,
-  descriptionCardColor,
-  descriptionCardContent,
+  color,
+  description,
 }) => {
   const dispatch = useDispatch();
   const cards = useSelector(getCards);
@@ -115,10 +115,7 @@ export const DropableArea = ({
         onDragOver={allowDrop}
         dropable="true"
       >
-        <DescriptionCard
-          color={descriptionCardColor}
-          description={descriptionCardContent}
-        />
+        <DescriptionCard color={color} description={description} />
         {cards.map(
           (card) =>
             card.tableId === id && (

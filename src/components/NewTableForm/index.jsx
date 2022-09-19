@@ -4,18 +4,23 @@ import { AddTable } from "../../store/actions/tables";
 
 export const NewTableForm = () => {
   const dispatch = useDispatch();
-  const [color, setColor] = useState("");
+  const colors = [
+    { name: "blue", code: "blue" },
+    { name: "green", code: "green" },
+    { name: "red", code: "red" },
+  ];
+  const [color, setColor] = useState(colors[0].code);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   console.log(title);
-  const createNewTable = () => {
-    console.log("HERE");
+  const createNewTable = (e) => {
+    e.preventDefault();
     if (title && description && color) {
       dispatch(AddTable(title, description, color));
     }
   };
   return (
-    <div className="new-table-form">
+    <form onSubmit={createNewTable} className="new-table-form">
       <label htmlFor="tableTitle">Titre</label>
       <input
         required
@@ -40,20 +45,14 @@ export const NewTableForm = () => {
         class="custom-selector"
         id="colorSelector"
       >
-        <option selected value="blue">
-          Blue
-        </option>
-        <option value="orange">Orange</option>
-        <option value="red">Red</option>
+        {colors.map((color) => (
+          <option value={color.code}>{color.name}</option>
+        ))}
       </select>
-      <button
-        onClick={createNewTable}
-        className="new-table-button"
-        type="submit"
-      >
+      <button className="new-table-button" type="submit">
         <i className="fas fa-table"></i>
         Créer
       </button>
-    </div>
+    </form>
   );
 };

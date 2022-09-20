@@ -1,0 +1,7 @@
+@mixin big-shadow {
+  box-shadow: 0px 0px 90px $color1;
+}
+
+@mixin medium-shadow {
+  box-shadow: 0px 0px 70px $color6;
+}

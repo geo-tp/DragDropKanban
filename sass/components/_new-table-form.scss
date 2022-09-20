@@ -5,7 +5,8 @@
   padding: 10px;
   margin-top: 10px;
   border-radius: 10px;
-
+  animation: appearslowlyandscale 500ms ease;
+  transform-origin: top;
   position: relative;
 
   & input {

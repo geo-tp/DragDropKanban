@@ -9,10 +9,12 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  animation: appear 300ms ease-in-out;
 
   &__form {
     background-color: $color1;
-
+    @include medium-shadow;
+    border: 1px solid $color6;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -47,6 +49,8 @@
 
   &__details {
     max-width: 500px;
+    @include medium-shadow;
+    border: 1px solid $color6;
 
     background-color: $color1;
     border-radius: 10px;
@@ -73,6 +77,11 @@
       position: absolute;
       right: 5%;
       top: 5%;
+    }
+
+    & button {
+      background-color: $color1;
+      border: 1px solid $color5;
     }
   }
 }

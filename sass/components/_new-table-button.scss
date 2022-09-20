@@ -8,8 +8,13 @@
   width: 300px;
   min-width: 300px;
   cursor: pointer;
+  transition: all 100ms;
 
   & i {
     margin-right: 15px;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }

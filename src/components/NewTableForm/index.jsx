@@ -5,9 +5,13 @@ import { AddTable } from "../../store/actions/tables";
 export const NewTableForm = () => {
   const dispatch = useDispatch();
   const colors = [
-    { name: "blue", code: "blue" },
-    { name: "green", code: "green" },
-    { name: "red", code: "red" },
+    { name: "Turquoise", code: "#3fa3b3" },
+    { name: "Violet", code: "#7F84B4" },
+    { name: "Rose", code: "#B556A6" },
+    { name: "Bleu", code: "#3C5A95" },
+    { name: "Rose", code: "#B556A6" },
+    { name: "Orange", code: "#C85748" },
+    { name: "Vert", code: "#4FA24D" },
   ];
   const [color, setColor] = useState(colors[0].code);
   const [title, setTitle] = useState("");
@@ -15,7 +19,7 @@ export const NewTableForm = () => {
   console.log(title);
   const createNewTable = (e) => {
     e.preventDefault();
-    if (title && description && color) {
+    if (title && color) {
       dispatch(AddTable(title, description, color));
     }
   };

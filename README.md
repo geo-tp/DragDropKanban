@@ -1,3 +1,17 @@
+# Kanban with Drag and Drop Features
+
+![](presentation.png)
+
+This website uses React & Redux, there is no other dependencies, drag & drop is handled natively without any libraries.
+
+## Figma
+
+[See created Figma models for this website](https://www.figma.com/file/BKepCj05skEn7uNijTAgmh/Kanban?node-id=1%3A2)
+
+## Live Demo
+
+[See Kanban live]()
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -30,8 +30,6 @@ export const cardsReducer = (state = cardsInitialState, action) => {
 
       currentCard = { ...currentCard, tableId: action.payload.tableId };
 
-      let nextFlag = false;
-
       let updatedState = [...state];
       updatedState.splice(indexOfCurrentCard, 1);
 
@@ -45,46 +43,12 @@ export const cardsReducer = (state = cardsInitialState, action) => {
         updatedState.push(currentCard);
       }
 
-      // updatedState.splice(2, 0, currentCard);
       return [
         ...updatedState.map((card) => {
           return card;
         }),
       ];
-    //     return [
-    //       ...state.map((card) => {
-    //         if (nextFlag) {
-    //           let cards = null;
-    //           if (beforeCard) {
-    //             nextFlag = false;
-    //             cards = [beforeCard, card];
-    //           } else {
-    //             cards = [currentCard, card];
-    //           }
 
-    //           const result = cards.reduce((a, v) => {
-    //             Object.keys(v).forEach((k) => (a[k] = a[k] || []).push(v[k]));
-    //             return a;
-    //           }, {});
-
-    //           console.log("res", result);
-
-    //           nextFlag = false;
-    //           return result;
-    //         }
-
-    //         if (beforeCard && card.id === beforeCard.id) {
-    //           nextFlag = true;
-    //           return currentCard;
-    //         } else if (afterCard && card.id === afterCard.id) {
-    //           nextFlag = true;
-    //           return afterCard;
-    //         } else if (card.id === action.payload.cardId) {
-    //           return { ...card, tableId: action.payload.tableId };
-    //         }
-    //         return card;
-    //       }),
-    //     ];
     case REMOVE_CARD:
       return state;
     default:

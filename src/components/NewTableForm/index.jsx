@@ -16,7 +16,6 @@ export const NewTableForm = () => {
   const [color, setColor] = useState(colors[0].code);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  console.log(title);
   const createNewTable = (e) => {
     e.preventDefault();
     if (title && color) {

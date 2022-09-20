@@ -7,7 +7,6 @@ import { NewTableContainer } from "../NewTableContainer";
 export const DropableAreaContainer = ({ openCreateModal, openDetailModal }) => {
   const dispatch = useDispatch();
   const tables = useSelector(getTables);
-  console.log(tables[0].id);
   return (
     <div className="dropable-area-container">
       {tables.map((table) => (

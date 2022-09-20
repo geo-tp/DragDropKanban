@@ -6,13 +6,6 @@ export const DetailCardModal = ({ tableTitle, card, closeDetailModal }) => {
   const [header, setHeader] = useState(card.header);
   const [body, setBody] = useState(card.body);
 
-  //   const handleSubmit = (event) => {
-  //     event.preventDefault();
-  //     console.log(tableId);
-  //     dispatch(addCard(tableId, header, body, `Le ${Date.now()} de ${author}`));
-  //     closeModal(true);
-  //   };
-
   return (
     <div className="card-modal">
       <div className="card-modal__details">

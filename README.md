@@ -10,7 +10,7 @@ This website uses React & Redux, there is no other dependencies, drag & drop is 
 
 ## Live Demo
 
-[See Kanban live]()
+[See Kanban live](https://geo-tp.github.io/DragDropKanban/)
 
 # Getting Started with Create React App
 
